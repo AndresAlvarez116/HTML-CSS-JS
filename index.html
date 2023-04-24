@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora en js</title>
+    <!--<script src="./index.js"></script>-->
+</head>
+<body>
+    <h1>Hola desde HTML</h1>
+    <script>
+        
+var deTipoEntero=5
+console.log('Ingresé un '+deTipoEntero+' en mi variable de tipo entero')
+alert("Ingresé un "+deTipoEntero+" en mi variable de tipo entero")
+
+var deTipoPalabras="'Hola amiguitos de youtube'"
+console.log('Ingresé un '+deTipoPalabras+' en mi variable de tipo palabras')
+alert("Ingresé un "+deTipoPalabras+" en mi variable de tipo palabras")
+
+var deTipoBooblean=false
+console.log('Ingresé un '+deTipoBooblean+' en mi variable de tipo booleana')
+alert("Ingresé un "+deTipoBooblean+" en mi variable de tipo booleana")
+
+const constante=15 //se le debe asignar un valor que no cambiará
+//constante=constante*2//esto indicará error porque no se puede cambiar su valor
+console.log("La mitad de la constante con valor "+constante+" es "+constante/2)
+alert("La mitad de la constante con valor "+constante+" es "+constante/2)
+
+
+//let actúa solo dentro de bloques. Es una mejora de var
+let pruebita='hola que tal'
+console.log("Ingresé "+pruebita+" en mi variable let")
+
+//operaciones con + , - , * y /
+console.log("La suma de "+deTipoEntero+" es "+(deTipoEntero+deTipoEntero))
+console.log("La resta de "+deTipoEntero+" es "+(deTipoEntero-deTipoEntero))
+console.log("La multiplicación de "+deTipoEntero+" es "+deTipoEntero*deTipoEntero)
+console.log("La división de "+deTipoEntero+" es "+deTipoEntero/deTipoEntero)
+
+//estructura selectiva if
+let númeroIf=prompt('Ingresa un número','')
+if(!isNaN(númeroIf)){
+    if(númeroIf>0)
+        //console.log("El número "+númeroIf+" es positivo")
+        alert("El número "+númeroIf+" es positivo")
+        else if(númeroIf<0)
+            //console.log("El número "+númeroIf+" es negativo")
+            alert("El número "+númeroIf+" es negativo")
+            else
+                //console.log("El número "+númeroIf+" es neutro")
+                alert("El número "+númeroIf+" es neutro")
+}
+else
+alert("Has ingresado: '"+númeroIf+"'. Eso no es un número")
+//Los 3 === comparan si es igual y si también es del mismo tipo de dato
+document.write('Hola desde Java Script');//Muestra en la página
+//estructura iterativa while
+
+let contador=0,acumulador=0,númeroWhile=1
+while(númeroWhile!=0){
+    númeroWhile=prompt('Ingresa un número o 0 para ver el informe','')
+    if(!isNaN(númeroWhile)&&númeroWhile!=0){
+        //comprobar si ingresó un número
+        //convertir un número a entero
+        //númeroWhile=parceInt(númeroWhile)//otra forma de hacerlo
+        //númeroWhile=Number(númeroWhile)
+        contador++
+        acumulador+=Number(númeroWhile)
+        //acumulador=acumulador+Number(númeroWhile)
+    }
+        //mensaje de error si ingresó letras 
+        else if(!isNaN(númeroWhile)&&númeroWhile==0){
+            alert("Haz clic en aceptar para comenzar a recibir su informe")
+            númeroWhile=0
+        }
+        else{
+            alert("Has ingresado: '"+númeroWhile+"'. Eso no es un número. Prueba nuevamente")
+            númeroWhile=1
+        }
+}
+   
+console.log("Ingresó "+contador+" números")
+alert("Ingresó "+contador+" números")
+
+console.log("La súma de todos los números es "+acumulador)
+alert("La súma de todos los números es "+acumulador)
+
+//Ahora, que también indique el promedio, el máximo y el mínimo
+//Luego, que no tome al 0 como uno de los ingresos.
+
+
+
+
+    </script>
+</body>
+</html>
